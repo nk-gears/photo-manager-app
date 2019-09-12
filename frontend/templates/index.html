@@ -15,7 +15,8 @@
 </div>
 
 <form method=post enctype=multipart/form-data action="/upload">
-  <input type=file id="imgSrcName" name=file onchange='showpreview(this)'>
+
+  <input type=file id="imgSrcName" name="photofile" onchange='showpreview(this)'>
   <input type=submit value=Upload>
 </form>
 <img width="50%" id="previewImage">

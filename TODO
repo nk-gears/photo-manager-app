@@ -1,0 +1,17 @@
+
+Do it in Local System then
+we can do it in Remote System
+- Read the file uploaded by the user
+and store them in the Cloud Bucket
+
+
+Create a Google Service Account :
+https://docs.cloudera.com/HDPDocuments/HDP3/HDP-3.1.0/bk_cloud-data-access/content/gcs-create-service-account.html
+
+Why Service Account :
+
+We are creating a Private Bucket.
+Our Code needs to get access to this Private Bucket
+If the Bucket is PUBLIC, then it can easily upload any files or delete files
+
+
