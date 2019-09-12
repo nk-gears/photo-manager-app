@@ -12,3 +12,11 @@
 - gcloud app create
 - gcloud app deploy app.yaml     --project bk-projects
 
+## Session 3 : 12 Sep 2019
+### Upload file to Blob Storage and Sent message to TaskQue
+
+- Create a Bucket in Google Cloud
+- Create Service Account
+  - https://docs.cloudera.com/HDPDocuments/HDP3/HDP-3.1.0/bk_cloud-data-access/content/gcs-create-service-account.html
+- Create PubSub Topic
+- Create Subscription Name
