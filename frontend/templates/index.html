@@ -20,7 +20,38 @@
   <input type=submit value=Upload>
 </form>
 <img width="50%" id="previewImage">
+
+<img width="50%" id="orig_image">  original_image from blob
+<img width="50%" id="processed_image"> processed_from blob
+
+
 <script>
+
+
+let requestId='{{ request_id }}'
+let filename='{{ filename }}'
+actualreqId=parseInt(requestId)
+let clearId=0;
+if(actualreqId>0) clearId=setInterval(checkProcessing_status,3000);
+
+function checkProcessing_status() {
+  //Check file got processed every 5 seconds
+  $.get("/api/check-status?req_id=" + actualreqId + "&filename=" + filename,function(data){
+
+       if(data.processed==true){
+          alert("Your image is processed and ready to view")
+          clearInterval(actualreqId);
+       }
+       let imageUrl="/render-image?req_id=" + actualreqId + "&filename=" + filename;
+       $("#orig_image").attr("src", imageUrl + "&mode=o");
+       $("#processed_image").attr("src",  imageUrl + "&mode=p");
+
+  })
+
+}
+
+
+
 function showpreview(e) {
         var reader = new FileReader();
         reader.onload = function (e) {

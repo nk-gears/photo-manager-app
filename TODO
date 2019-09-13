@@ -15,3 +15,12 @@ Our Code needs to get access to this Private Bucket
 If the Bucket is PUBLIC, then it can easily upload any files or delete files
 
 
+13 Sep 2019 :
+
+- Refresh - Quick
+- /api/ask-status - Flask
+  - : Check the Blob Storage whether the file is processed or not
+  - : It will get the actual processed file
+- /api/get-processed-image
+- BG White : VM Instance Backend
+
